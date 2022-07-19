@@ -15,6 +15,7 @@ namespace CityInfo.API.DbContexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.UseCollation("Cyrillic_General_CS_AS");
             modelBuilder.Entity<City>().HasData(
                  new City("New York City")
                  {
